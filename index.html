@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="400"></canvas>
+    <script>
+        var mycanvas = document.querySelector('canvas');
+
+        var ctx = mycanvas.getContext('2d');
+
+        var girdSize = 10;
+
+        var mycanvasWidth = ctx.canvas.width;
+        var mycanvasHeight = ctx.canvas.height;
+
+        var vertical = mycanvasWidth / girdSize;
+        var line = mycanvasHeight / girdSize;
+
+        for(var i=1 ; i < vertical ; i++){
+            ctx.beginPath();
+            ctx.moveTo( girdSize*i-0.5 , 0);
+            ctx.lineTo( girdSize*i-0.5 , mycanvasHeight);
+            ctx.strokeStyle = "#CCC";
+            ctx.stroke();
+        }
+
+        for(var i=1 ; i < line ; i++){
+            ctx.beginPath();
+            ctx.moveTo( 0, girdSize*i-0.5 );
+            ctx.lineTo( mycanvasWidth, girdSize*i-0.5 );
+            ctx.strokeStyle = "#CCC";
+            ctx.stroke();
+        }
+
+
+        ctx.beginPath();
+        ctx.moveTo( 20 , 30 );
+        ctx.lineTo( 20 , 380 );
+        ctx.strokeStyle = '#000';
+        ctx.stroke();
+
+        // 三角形
+        ctx.beginPath();
+        ctx.moveTo( 15 , 30 );
+        ctx.lineTo( 25 , 30 );
+        ctx.lineTo( 20 , 20 );
+        ctx.strokeStyle = '#000';
+        ctx.closePath();
+        ctx.fill();
+        // 三角形
+
+        ctx.beginPath();
+        ctx.moveTo( 20 , 380 );
+        ctx.lineTo( 570 , 380 );
+        ctx.strokeStyle = '#000';
+        ctx.stroke();
+
+        // 三角形
+        ctx.beginPath();
+        ctx.moveTo( 570 , 375 );
+        ctx.lineTo( 570 , 385 );
+        ctx.lineTo( 580 , 380 );
+        ctx.strokeStyle = '#000';
+        ctx.closePath();
+        ctx.fill();
+        // 三角形
+
+
+
+        ctx.beginPath();
+        ctx.moveTo( 20 , 380 );
+        ctx.lineTo( 120 , 260 );
+        ctx.strokeStyle = '#000';
+        ctx.stroke();
+
+
+        // 矩形
+        ctx.beginPath();
+        ctx.moveTo( 116 , 256 );
+        ctx.lineTo( 123 , 256 );
+        ctx.lineTo( 123 , 263 );
+        ctx.lineTo( 116 , 263 );
+        ctx.closePath();
+        ctx.fill();
+        // 矩形
+
+
+        ctx.beginPath();
+        ctx.moveTo( 120 , 260 );
+        ctx.lineTo( 220 , 220 );
+        ctx.strokeStyle = '#000';
+        ctx.stroke();
+
+
+        // 矩形
+        ctx.beginPath();
+        ctx.moveTo( 216 , 216 );
+        ctx.lineTo( 223 , 216 );
+        ctx.lineTo( 223 , 223 );
+        ctx.lineTo( 216 , 223 );
+        ctx.closePath();
+        ctx.fill();
+        // 矩形
+
+        ctx.beginPath();
+        ctx.moveTo( 220 , 220 );
+        ctx.lineTo( 320 , 140 );
+        ctx.strokeStyle = '#000';
+        ctx.stroke();
+
+        // 矩形
+        ctx.beginPath();
+        ctx.moveTo( 316 , 136 );
+        ctx.lineTo( 323 , 136 );
+        ctx.lineTo( 323 , 143 );
+        ctx.lineTo( 316 , 143 );
+        ctx.closePath();
+        ctx.fill();
+        // 矩形
+
+        ctx.beginPath();
+        ctx.moveTo( 320 , 140 );
+        ctx.lineTo( 420 , 60 );
+        ctx.strokeStyle = '#000';
+        ctx.stroke();
+
+        // 矩形
+        ctx.beginPath();
+        ctx.moveTo( 416 , 56 );
+        ctx.lineTo( 423 , 56 );
+        ctx.lineTo( 423 , 63 );
+        ctx.lineTo( 416 , 63 );
+        ctx.closePath();
+        ctx.fill();
+        // 矩形
+
+        ctx.beginPath();
+        ctx.moveTo( 420 , 60 );
+        ctx.lineTo( 520 , 300 );
+        ctx.strokeStyle = '#000';
+        ctx.stroke();
+
+        // 矩形
+        ctx.beginPath();
+        ctx.moveTo( 516 , 296 );
+        ctx.lineTo( 523 , 296 );
+        ctx.lineTo( 523 , 303 );
+        ctx.lineTo( 516 , 303 );
+        ctx.closePath();
+        ctx.fill();
+        // 矩形
+    </script>
+</body>
+</html>
